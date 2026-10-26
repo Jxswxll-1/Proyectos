@@ -1,0 +1,147 @@
+
+:root {
+  --oscuro: #12294a;
+  --principal: #1f3a5f;
+  --medio: #2f6fb5;
+  --claro: #4c9be0;
+  --fondo: #eaf2fb;
+}
+
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.7;
+  color: #2b2b36;
+  background: linear-gradient(180deg, var(--fondo) 0%, #ffffff 100%);
+  min-height: 100vh;
+}
+
+header {
+  background: linear-gradient(135deg, var(--oscuro), var(--principal) 50%, var(--claro));
+  color: #fff;
+  padding: 50px 20px 44px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.1rem;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+  margin-top: 8px;
+  opacity: 0.92;
+  font-size: 1.05rem;
+}
+
+nav {
+  background: var(--oscuro);
+  text-align: center;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 3px 4px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: inline-block;
+  font-weight: 600;
+  transition: background 0.25s, transform 0.25s;
+}
+
+nav a:hover {
+  background: var(--medio);
+  transform: translateY(-2px);
+}
+
+nav a.activo {
+  background: linear-gradient(135deg, var(--medio), var(--claro));
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+main {
+  max-width: 820px;
+  margin: 36px auto;
+  padding: 0 20px;
+}
+
+main h2 {
+  color: var(--principal);
+  margin: 24px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 3px solid var(--claro);
+  display: inline-block;
+}
+
+.tarjeta h2 {
+  margin-top: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+main p { margin-bottom: 14px; }
+
+ul { margin: 0 0 14px 24px; }
+li { margin-bottom: 8px; }
+
+.tarjeta {
+  background: #fff;
+  border-left: 6px solid var(--claro);
+  border-radius: 10px;
+  padding: 18px 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 14px rgba(40, 40, 90, 0.12);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(40, 40, 90, 0.2);
+}
+
+.botones {
+  margin-top: 30px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.boton {
+  background: linear-gradient(135deg, var(--principal), var(--claro));
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 26px;
+  border-radius: 30px;
+  display: inline-block;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(40, 40, 120, 0.35);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.boton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(40, 40, 120, 0.45);
+}
+
+footer {
+  background: var(--oscuro);
+  color: #dfe6f0;
+  text-align: center;
+  padding: 22px;
+  margin-top: 50px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  header h1 { font-size: 1.6rem; }
+  nav a { padding: 6px 12px; }
+}   
